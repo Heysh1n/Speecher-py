@@ -1,0 +1,22 @@
+# pyproject.toml
+[build-system]
+requires = ["setuptools>=68.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "fc-tool"
+version = "2.0.0"
+description = "Smart File Collector — collect project files for AI context"
+readme = "README.md"
+requires-python = ">=3.10"
+license = {text = "MIT"}
+keywords = ["file-collector", "cli", "ai", "context"]
+
+# Нет внешних зависимостей!
+dependencies = []
+
+[project.scripts]
+fc = "fc.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["fc*"]
